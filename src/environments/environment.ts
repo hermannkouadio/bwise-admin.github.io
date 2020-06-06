@@ -3,8 +3,12 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+<<<<<<< HEAD
     production: false, 
     apiBaseUrl: "http://127.0.0.1:9022/"//"https://bwise-api.herokuapp.com/"
+=======
+  production: false
+>>>>>>> e0a692563a06ef513272cf4b67c00d3ba4e0c77f
 };
 
 /*
