@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import { CustomerService } from '../../../services/customer.service';
+import { SignInService } from '../../../services/login.service';
 
 @Component({
     selector: 'app-header',
@@ -10,12 +12,19 @@ import { TranslateService } from '@ngx-translate/core';
 export class HeaderComponent implements OnInit {
     public pushRightClass: string;
 
-    constructor(private translate: TranslateService, public router: Router) {
+    username: string;
+    uid: number;
+
+    constructor(private translate: TranslateService, private loginService: SignInService, private customService: CustomerService, public router: Router) {
         this.router.events.subscribe((val) => {
             if (val instanceof NavigationEnd && window.innerWidth <= 992 && this.isToggled()) {
                 this.toggleSidebar();
             }
         });
+
+        // init username
+        this.username = customService.getUserName();
+        this.uid = customService.getUID();
     }
 
     ngOnInit() {
@@ -38,7 +47,11 @@ export class HeaderComponent implements OnInit {
     }
 
     onLoggedout() {
-        localStorage.removeItem('isLoggedin');
+        this.loginService.logout(this.customService.getUID(), this.customService.getToken())
+        .subscribe((resp)=>{
+            alert(resp);
+            this.router.navigateByUrl('/login');
+        });
     }
 
     changeLang(language: string) {

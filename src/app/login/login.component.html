@@ -2,30 +2,32 @@
     <div class="row justify-content-md-center">
         <div class="col-md-4">
             <img class="user-avatar" src="assets/images/logo.png" width="150px" />
-            <h1>SB Admin BS4 Angular9</h1>
-            <form role="form">
+            <h1>Bwise</h1>
+            <form role="form" (ngSubmit)="onLoggedin()">
                 <div class="form-content">
                     <div class="form-group">
-                        <input
+                        <input type="text"
+                            name="username"
                             [placeholder]="'Email' | translate"
                             class="form-control input-underline input-lg"
-                            type="text"
+                            [(ngModel)] ="jwtRequest.username"
                         />
                     </div>
 
                     <div class="form-group">
-                        <input
+                        <input type="password"
+                            name="password"
                             [placeholder]="'Password' | translate"
                             class="form-control input-underline input-lg"
-                            type="password"
+                            [(ngModel)] ="jwtRequest.password"
                         />
                     </div>
                 </div>
-                <a (click)="onLoggedin()" [routerLink]="['/dashboard']" class="btn rounded-btn">{{
+                <button type="submit" class="btn rounded-btn">{{
                     'Log in' | translate
-                }}</a>
+                }}</button>
                 &nbsp;
-                <a [routerLink]="['/signup']" class="btn rounded-btn">{{ 'Register' | translate }}</a>
+                <button [routerLink]="['/signup']" class="btn rounded-btn">{{ 'Register' | translate }}</button>
             </form>
         </div>
     </div>

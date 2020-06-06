@@ -1,17 +1,17 @@
-$topnav-background-color: #222;
+$topnav-background-color: rgb(255, 255, 255);
 :host {
     .navbar {
         background-color: $topnav-background-color;
 
         .navbar-brand {
-            color: #fff;
+            color: rgb(63, 2, 99);
         }
 
         .nav-item > a {
-            color: #999;
+            color: rgb(63, 2, 99);
 
-            &:hover {
-                color: #fff;
+            &:hover {   
+                color: #000;
             }
         }
     }

@@ -15,7 +15,7 @@ const routes: Routes = [
             { path: 'charts', loadChildren: () => import('./charts/charts.module').then((m) => m.ChartsModule) },
             { path: 'tables', loadChildren: () => import('./tables/tables.module').then((m) => m.TablesModule) },
             { path: 'forms', loadChildren: () => import('./form/form.module').then((m) => m.FormModule) },
-            {
+            {   
                 path: 'bs-element',
                 loadChildren: () => import('./bs-element/bs-element.module').then((m) => m.BsElementModule)
             },
@@ -23,6 +23,30 @@ const routes: Routes = [
             {
                 path: 'components',
                 loadChildren: () => import('./bs-component/bs-component.module').then((m) => m.BsComponentModule)
+            },
+            {
+                path: 'orders',
+                loadChildren: () => import('./order/order.module').then((m) => m.OrderModule)
+            },
+            {
+                path: 'categories',
+                loadChildren: () => import('./category/category.module').then((m) => m.CategoryModule)
+            },
+            {
+                path: 'categories/:categoryId',
+                loadChildren: () => import('./category-detail/category-detail.module').then((m) => m.CategoryDetailModule)
+            },
+            {
+                path: 'products',
+                loadChildren: () => import('./product/product.module').then((m) => m.ProductModule)
+            },
+            {
+                path: 'products/:productId',
+                loadChildren: () => import('./product-detail/product-detail.module').then((m) => m.ProductDetailModule)
+            },
+            {
+                path: 'users',
+                loadChildren: () => import('./user/user.module').then((m) => m.UserModule)
             },
             {
                 path: 'blank-page',
@@ -36,4 +60,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class LayoutRoutingModule {}
+export class LayoutRoutingModule { }

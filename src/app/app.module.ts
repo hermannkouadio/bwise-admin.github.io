@@ -8,11 +8,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthGuard } from './shared';
 import { LanguageTranslationModule } from './shared/modules/language-translation/language-translation.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
     imports: [
         CommonModule,
         BrowserModule,
+        FormsModule,
+        ReactiveFormsModule,
         BrowserAnimationsModule,
         HttpClientModule,
         LanguageTranslationModule,

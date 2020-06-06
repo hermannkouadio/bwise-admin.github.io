@@ -1,4 +1,4 @@
-$topnav-background-color: #222;
+$topnav-background-color: rgb(255, 255, 255);
 .sidebar {
     border-radius: 0;
     position: fixed;
@@ -27,7 +27,7 @@ $topnav-background-color: #222;
             background: $topnav-background-color;
             border: 0;
             border-radius: 0;
-            color: #999;
+            color: rgb(8, 12, 17);
             text-decoration: none;
 
             .fa {
@@ -37,7 +37,7 @@ $topnav-background-color: #222;
 
         a:hover {
             background: darken($topnav-background-color, 5%);
-            color: #fff;
+            color:rgb(63, 2, 99);
         }
 
         a.router-link-active {
@@ -66,7 +66,7 @@ $topnav-background-color: #222;
             margin-bottom: 0;
 
             a {
-                color: #999;
+                color: #000;
                 text-decoration: none;
                 font-weight: 400;
                 background: $topnav-background-color;
@@ -92,7 +92,7 @@ $topnav-background-color: #222;
         }
 
         .panel-collapse {
-            border-radious: 0;
+            border-radius: 0;
             border: none;
 
             .panel-body {
@@ -102,11 +102,11 @@ $topnav-background-color: #222;
                     border: 0 solid transparent;
 
                     a {
-                        color: #999;
+                        color: rgb(0, 0, 0);
                     }
 
                     a:hover {
-                        color: #fff;
+                        color: rgb(12, 0, 0);
                     }
                 }
 
@@ -140,7 +140,7 @@ $topnav-background-color: #222;
 
             li {
                 a {
-                    color: #fff;
+                    color: rgb(63, 2, 99);
                     padding: 10px;
                     display: block;
                 }
