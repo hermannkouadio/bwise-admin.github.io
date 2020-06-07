@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
                 if (resp.token) {
                     this.customer.setToken(resp.token, resp.user['fullname']);
                     this.customer.setUID('' + resp.user['uId']);
-                    this.router.navigateByUrl('/dashboard');
+                    this.router.navigateByUrl('/layout');
                 }
             });
     };

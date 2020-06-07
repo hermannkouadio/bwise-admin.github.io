@@ -29,7 +29,7 @@
                 <td>{{ cat.catDescription }}</td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <a class="btn btn-primary" [routerLink]="['/categories', cat.catId]" aria-label="Details">
+                        <a class="btn btn-primary" [routerLink]="['/layout/categories', cat.catId]" aria-label="Details">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </a>
                         <a class="btn btn-secondary" (click)="updateForm(cat)" data-toggle="modal" data-target="#addModal" aria-label="Update">

@@ -41,8 +41,8 @@ $topnav-background-color: rgb(255, 255, 255);
         }
 
         a.router-link-active {
-            background: darken($topnav-background-color, 5%);
-            color: #fff;
+            /* background: darken($topnav-background-color, 5%); */
+            color: rgb(0, 0, 0);
         }
 
         .header-fields {

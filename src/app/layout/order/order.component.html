@@ -5,28 +5,23 @@
             <div class="col-md-5">
                 <strong>Orders List</strong>
             </div>
-            <!-- <div class="col-md-2">
-                <button type="button" class="btn btn-xs btn-primary" data-toggle="modal" data-target="#addModal" aria-label="Update">
-                    <i class="fa fa-plus-square-o"></i>
-                    <span> Add</span>
-                </button>
-            </div> -->
         </div>
     </div>
     <table class="card-body table table-hover">
         <thead>
             <tr>
                 <th>#</th>
-                <th>Owner</th>
-                <th>Status</th>
+                <th>Propriétaire</th>
+                <th>Etat</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let ord of orders; index as id">
-                <th scope="row">{{ord.ordId}}</th>
+                <th scope="row">{{id}}</th>
                 <td>{{ ord.owner.fullname }}</td>
                 <td>
+                    <span class="badge badge-secondary" *ngIf="ord.ordStatus == 0">Brouillon</span>
                     <span class="badge badge-warning" *ngIf="ord.ordStatus == 1">En atttente</span>
                     <span class="badge badge-primary" *ngIf="ord.ordStatus == 2">Livraison en cours</span>
                     <span class="badge badge-success" *ngIf="ord.ordStatus == 3">Livree</span>
@@ -34,21 +29,10 @@
                 </td>
                 <td>
                     <div class="btn-group btn-xs" role="group" aria-badge="Basic example">
-                        <a class="btn btn-xs btn-primary" href="#">
-                            <i class="fa  fa-cog">Gerer</i>
+                        <a class="btn btn-xs btn-primary" [routerLink]="['/layout/orders', ord.ordId]">
+                            <i class="fa  fa-cog"> Gerer</i>
                         </a>
                     </div>
-                    <!--<button type="button" class="btn btn-xs btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Action
-                    </button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="javascript:void(0)">
-                            <i class="fa fa-fw fa-pencil"></i> Edit
-                        </a>
-                        <a class="dropdown-item" href="javascript:void(0)">
-                            <i class="fa fa-fw fa-trash"></i> Delete
-                        </a>
-                    </div>-->
                 </td>
             </tr>
         </tbody>

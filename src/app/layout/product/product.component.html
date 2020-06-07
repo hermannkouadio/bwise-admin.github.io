@@ -31,7 +31,7 @@
                 <td>{{ prod.prdDescription }}</td>
                 <td>
                     <div class="btn-group" role="group" aria-label="Basic example">
-                        <a class="btn btn-primary" [routerLink]="['/products', prod.prdId]" aria-label="Details">
+                        <a class="btn btn-primary" [routerLink]="['/layout/products', prod.prdId]" aria-label="Details">
                             <i class="fa fa-info-circle" aria-hidden="true"></i>
                         </a>
                         <a class="btn btn-secondary" (click)="updateForm(prod)" data-toggle="modal" data-target="#addModal" aria-label="Update">

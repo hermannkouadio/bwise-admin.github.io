@@ -1,1 +1,85 @@
-<p>order-detail works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="card card-primary">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-5">
+                            <strong>Details Commande</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <i class="fa fa-hashtag" aria-hidden="true"></i>
+                            <span> Num. Commande</span>
+                            <br/>
+                            <p>{{ order.owner.fullname }}</p>
+                            <hr/>
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                            <span> Nom</span>
+                            <br/>
+                            <p>{{ order.owner.fullname }}</p>
+                            <hr/>
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fa fa-phone" aria-hidden="true"></i>
+                            <span> Contact</span>
+                            <br/>
+                            <p>{{ order.owner.mobile }}</p>
+                            <hr/>
+                        </div>
+                        <div class="col-md-3">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                            <span> Lieu de Livraison</span>
+                            <br/>
+                            <p>{{ order.owner.location }}</p>
+                            <hr/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <br/>
+    <div class="row">
+        <table class="card-body table table-hover">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Libellé</th>
+                    <th>Prix Unitaire</th>
+                    <th>Qunantité</th>
+                    <th>Etat</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of items; index as id">
+                    <th scope="row">{{id}}</th>
+                    <td>{{ item.product.prdLabel }}</td>
+                    <td>{{ item.product.prdUP }}</td>
+                    <!-- 0: draft, 1: wait validation, 2: in progress, 3: delivered, 4: cancel -->
+                    <td>{{ item.quantity }}</td>
+                    <td>{{ item.order.ordStatus }}</td>
+                    <td>
+                        <span class="badge badge-danger" *ngIf="ord.ordStatus == 4">Annulee</span>
+                    </td>
+                    <td>
+                        <div class="btn-group btn-xs" role="group" aria-badge="Basic example">
+                            <a *ngIf="item.order.ordStatus == 0" class="btn btn-xs btn-primary" [routerLink]="['/orders', ord.ordId]">
+                                <i class="fa  fa-cog"> Gerer</i>
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

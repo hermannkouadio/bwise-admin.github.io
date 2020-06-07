@@ -7,15 +7,14 @@ const routes: Routes = [
         path: '',
         component: LayoutComponent,
         children: [
-            { path: '', redirectTo: 'dashboard', pathMatch: 'prefix' },
             {
-                path: 'dashboard',
+                path: '',
                 loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule)
             },
             { path: 'charts', loadChildren: () => import('./charts/charts.module').then((m) => m.ChartsModule) },
             { path: 'tables', loadChildren: () => import('./tables/tables.module').then((m) => m.TablesModule) },
             { path: 'forms', loadChildren: () => import('./form/form.module').then((m) => m.FormModule) },
-            {   
+            {
                 path: 'bs-element',
                 loadChildren: () => import('./bs-element/bs-element.module').then((m) => m.BsElementModule)
             },
@@ -27,6 +26,9 @@ const routes: Routes = [
             {
                 path: 'orders',
                 loadChildren: () => import('./order/order.module').then((m) => m.OrderModule)
+            },{
+                path: 'orders/:orderId',
+                loadChildren: () => import('./order-detail/order-detail.module').then((m) => m.OrderDetailModule)
             },
             {
                 path: 'categories',
