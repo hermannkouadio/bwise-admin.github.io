@@ -7,4 +7,8 @@
     font-size: .950rem;
     line-height: 1.2;
     border-radius: .2rem;
-  }
+}
+
+a > span {
+    cursor: pointer;
+}

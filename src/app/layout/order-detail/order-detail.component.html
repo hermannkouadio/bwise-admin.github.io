@@ -11,17 +11,25 @@
                         <div class="col-md-2">
                             <!-- 0: draft, 1: wait validation, 2: in progress, 3: delivered, 4: cancel -->
                             <div>
-                                <span class="title">Etape Suivante</span>
-                                <span *ngIf="order.ordStatus == 0 || order.ordStatus == 4" class="badge badge-warning">
-                                    Non Defini</span>
-                                <a href="#">
-                                    <span *ngIf="order.ordStatus == 1" class="badge badge-primary">
-                                        Accepter</span>
-                                    <span *ngIf="order.ordStatus == 2" class="badge badge-secondary">
-                                        Livrer</span>
+                                <div *ngIf="order.ordStatus == 0 || order.ordStatus == 3 || order.ordStatus == 4">
+                                    <span class="title">Etat Actuel</span>
+                                    <span *ngIf="order.ordStatus == 4" class="badge badge-danger">
+                                        Annulle</span>
                                     <span *ngIf="order.ordStatus == 3" class="badge badge-success">
-                                        Terminer</span>
-                                </a>
+                                        Livre</span>
+                                    <span *ngIf="order.ordStatus == 0" class="badge badge-secondary">
+                                        Brouillon</span>
+                                </div>
+
+                                <div *ngIf="order.ordStatus == 1 || order.ordStatus == 2">
+                                    <span class="title">Etape Suivante</span>
+                                    <a [routerLink]="['/layout/orders', order.ordId]" (click)="updateState(order)">
+                                        <span *ngIf="order.ordStatus == 1" class="badge badge-primary">
+                                            Accepter</span>
+                                        <span *ngIf="order.ordStatus == 2" class="badge badge-success">
+                                            Livrer</span>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Order } from '../../models/order';
 import { FormGroup, FormBuilder } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CustomerService } from '../../services/customer.service';
 import { OrderItem } from '../../models/order-item';
 import { OrderService } from '../../services/order.service';
@@ -16,7 +16,7 @@ export class OrderDetailComponent implements OnInit {
   orderDetailForm: FormGroup;
   order: Order;
   items: Array<OrderItem>;
-  constructor(private fb: FormBuilder, private route: ActivatedRoute, private customService: CustomerService, private orderService: OrderService) {
+  constructor(private router: Router, private fb: FormBuilder, private route: ActivatedRoute, private customService: CustomerService, private orderService: OrderService) {
     this.order = new Order();
     this.items = new Array<OrderItem>();
   }
@@ -45,4 +45,15 @@ export class OrderDetailComponent implements OnInit {
     });
   }
 
+  updateState(data) {
+    this.order = data;
+    this.orderService.update(this.order.ordId, data, this.customService.getToken())
+      .subscribe(
+        (resp) => {
+          // document.getElementById("closeModal").click();
+          this.order = resp;
+          location.reload();
+          //this.router.navigateByUrl('/layout/orders/' + this.order.ordId);
+        });
+  }
 }

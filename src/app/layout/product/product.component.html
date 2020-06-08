@@ -37,7 +37,7 @@
                         <a class="btn btn-secondary" (click)="updateForm(prod)" data-toggle="modal" data-target="#addModal" aria-label="Update">
                             <i class="fa fa-pencil-square-o fa-lg"></i>
                         </a>
-                        <a class="btn btn-danger"  (click)="delete(prod)" data-toggle="modal" data-target="#confirmDelete" aria-label="Delete">
+                        <a class="btn btn-danger" (click)="delete(prod)" data-toggle="modal" data-target="#confirmDelete" aria-label="Delete">
                             <i class="fa fa-trash-o" aria-hidden="true"></i>
                         </a>
                     </div>
@@ -52,7 +52,10 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="addModalLabel">Nouveau Produit</h5>
+                    <h5 class="modal-title" id="addModalLabel">
+                        <span *ngIf="!isUpdate">Nouveau Produit</span>
+                        <span *ngIf="isUpdate">Mise à Jour</span>
+                    </h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -76,7 +79,7 @@
 
                         <div class="form-group">
                             <br/>
-                            <input type="file" accept=".jpeg, .jpg, .jpe, .jfif, .jif, .png" class="form-control" placeholder="image" formControlName="imagePath"
+                            <input type="file" accept=".jpeg, .jpg, .jpe, .png" class="form-control" placeholder="image" formControlName="imagePath"
                                 required />
                         </div>
 

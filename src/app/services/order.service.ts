@@ -45,4 +45,13 @@ export class OrderService {
     return this.http.get<OrderItem[]>(environment.apiBaseUrl + 'orders/' + orderId + '/items', httpOptions);
   }
 
+  update(id: number, data: Order, token: string): Observable<Order> {
+    // update token
+    httpOptions.headers =
+      httpOptions.headers.set('Authorization', token);
+    // now returns an Order Observable
+    return this.http.put<Order>(environment.apiBaseUrl + 'orders/' + id, data, httpOptions);
+  }
+
+
 }
