@@ -4,7 +4,7 @@
 
 export const environment = {
     production: false, 
-    apiBaseUrl: "http://127.0.0.1:9022/"//"https://bwise-api.herokuapp.com/"
+    apiBaseUrl: "https://bwise-api.herokuapp.com/" //"http://127.0.0.1:9022/"
 };
 
 /*
