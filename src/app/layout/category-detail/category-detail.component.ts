@@ -25,7 +25,6 @@ export class CategoryDetailComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.category.catId = +params.get('categoryId');
     });
-
     // get product from API
     this.categoryService.getOne(this.category.catId, this.customService.getToken()).subscribe(resp => {
 

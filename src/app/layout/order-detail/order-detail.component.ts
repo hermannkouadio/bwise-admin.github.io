@@ -24,6 +24,7 @@ export class OrderDetailComponent implements OnInit {
     this.route.paramMap.subscribe(params => {
       this.order.ordId = +params.get('orderId');
     });
+    debugger;
 
     // get product from API
     this.orderService.getOne(this.order.ordId, this.customService.getToken()).subscribe(resp => {
