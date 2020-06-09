@@ -10,8 +10,8 @@
         "test": "ng test",
         "test-ci": "TEST_CI=true ng test",
         "lint": "ng lint",
-        "postinstall": "ng build --aot --prod BSADMINBS4",
-        "heroku-postbuild": "ng build --prod BSADMINBS4",
+        "postinstall": "ng build --aot --prod",
+        "heroku-postbuild": "ng build --prod",
         "e2e": "ng e2e"
     },
     "private": true,
