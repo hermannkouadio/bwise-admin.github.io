@@ -1,12 +1,11 @@
 {
-    "name": "sb-admin-bs4-angular-9",
+    "name": "Bwise-bo",
     "version": "9.0.0",
     "license": "Apache",
     "scripts": {
         "ng": "ng",
         "start": "node server.js",
         "build": "ng build --prod",
-        "gitbuild": "ng build --prod --base-href /start-angular/SB-Admin-BS4-Angular-7/master/dist/",
         "test": "ng test",
         "test-ci": "TEST_CI=true ng test",
         "lint": "ng lint",
