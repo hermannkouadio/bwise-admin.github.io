@@ -1,0 +1,101 @@
+[debug] [2020-06-09T20:37:59.309Z] ----------------------------------------------------------------------
+[debug] [2020-06-09T20:37:59.312Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jhon\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-06-09T20:37:59.312Z] CLI Version:   8.4.2
+[debug] [2020-06-09T20:37:59.312Z] Platform:      win32
+[debug] [2020-06-09T20:37:59.312Z] Node Version:  v12.16.2
+[debug] [2020-06-09T20:37:59.314Z] Time:          Tue Jun 09 2020 20:37:59 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-06-09T20:37:59.314Z] ----------------------------------------------------------------------
+[debug] [2020-06-09T20:37:59.314Z] 
+[debug] [2020-06-09T20:37:59.322Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-09T20:37:59.322Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Autres\Projet\Template\SBAdminBS4
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using bwise-bo. 
+[debug] [2020-06-09T20:38:12.714Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/bwise-bo  
+ 
+[debug] [2020-06-09T20:38:24.599Z] Server Error. socket hang up
+[debug] [2020-06-09T20:38:25.476Z] FirebaseError: Server Error. socket hang up
+    at Request._callback (C:\Users\jhon\AppData\Roaming\npm\node_modules\firebase-tools\lib\api.js:32:31)
+    at self.callback (C:\Users\jhon\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:185:22)
+    at Request.emit (events.js:310:20)
+    at Request.EventEmitter.emit (domain.js:482:12)
+    at Request.onRequestError (C:\Users\jhon\AppData\Roaming\npm\node_modules\firebase-tools\node_modules\request\request.js:877:8)
+    at ClientRequest.emit (events.js:322:22)
+    at ClientRequest.EventEmitter.emit (domain.js:482:12)
+    at TLSSocket.socketOnEnd (_http_client.js:460:9)
+    at TLSSocket.emit (events.js:322:22)
+    at TLSSocket.EventEmitter.emit (domain.js:482:12)
+    at endReadableNT (_stream_readable.js:1187:12)
+    at processTicksAndRejections (internal/process/task_queues.js:84:21)
+[error] 
+[error] Error: Failed to get Firebase project bwise-bo. Please make sure the project exists and your account has permission to access it.
+[debug] [2020-06-09T20:39:11.098Z] ----------------------------------------------------------------------
+[debug] [2020-06-09T20:39:11.101Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\jhon\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2020-06-09T20:39:11.101Z] CLI Version:   8.4.2
+[debug] [2020-06-09T20:39:11.101Z] Platform:      win32
+[debug] [2020-06-09T20:39:11.101Z] Node Version:  v12.16.2
+[debug] [2020-06-09T20:39:11.102Z] Time:          Tue Jun 09 2020 20:39:11 GMT+0000 (Greenwich Mean Time)
+[debug] [2020-06-09T20:39:11.103Z] ----------------------------------------------------------------------
+[debug] [2020-06-09T20:39:11.103Z] 
+[debug] [2020-06-09T20:39:11.111Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-06-09T20:39:11.111Z] > authorizing via signed-in user
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  E:\Autres\Projet\Template\SBAdminBS4
+
+Before we get started, keep in mind:
+
+  * You are initializing in an existing Firebase project directory
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[info] i  .firebaserc already has a default project, using bwise-bo. 
+[debug] [2020-06-09T20:39:17.012Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/bwise-bo  
+ 
+[debug] [2020-06-09T20:39:20.743Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 09 Jun 2020 20:39:23 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-27=\":443\"; ma=2592000,h3-25=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q049=\":443\"; ma=2592000,h3-Q048=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+=== Hosting Setup
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[info] +  Wrote dist/bwise-administration/404.html 
+[debug] [2020-06-09T20:41:30.565Z] >>> HTTP REQUEST GET https://www.gstatic.com/firebasejs/releases.json  
+ 
+[debug] [2020-06-09T20:41:50.322Z] Error: getaddrinfo ENOTFOUND www.gstatic.com
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (dns.js:64:26)
+[error] 
+[error] Error: Server Error. getaddrinfo ENOTFOUND www.gstatic.com
